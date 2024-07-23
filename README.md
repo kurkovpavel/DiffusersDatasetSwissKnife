@@ -20,5 +20,7 @@ Install:
 
 Using:
 python start.py
+![alt text](https://github.com/kurkovpavel/DiffusersDatasetSwissKnife/blob/main/segment.png?raw=true)
 
-![alt text]([https://github.com/kurkovpavel/DiffusersDatasetSwissKnife/blob/main/segment.png))
+![alt text](https://github.com/kurkovpavel/DiffusersDatasetSwissKnife/blob/main/collect.png?raw=true)
+
