@@ -21,3 +21,4 @@ Install:
 Using:
 python start.py
 
+![alt text]([https://github.com/kurkovpavel/DiffusersDatasetSwissKnife/blob/main/segment.png))
