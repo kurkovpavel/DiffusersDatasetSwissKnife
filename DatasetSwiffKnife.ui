@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>540</width>
+    <height>732</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>540</width>
+    <height>732</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>540</width>
+    <height>732</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string notr="true">DatasetSwissKnife</string>
+  </property>
+  <property name="locale">
+   <locale language="Afar" country="Ethiopia"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>521</width>
+      <height>711</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="collect_tab">
+     <attribute name="title">
+      <string>Collect images</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>160</y>
+        <width>491</width>
+        <height>271</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Yolo class detection</string>
+      </property>
+      <widget class="QGroupBox" name="groupBox_5">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>471</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Yolo model path</string>
+       </property>
+       <widget class="QLineEdit" name="collect_model_path">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>381</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="collect_model_browse">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>20</y>
+          <width>61</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Browse</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_6">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>471</width>
+         <height>101</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Supported class detection</string>
+       </property>
+       <widget class="QListWidget" name="Collect_model_list">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>451</width>
+          <height>71</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_8">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>180</y>
+         <width>471</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Yolo recognition filters</string>
+       </property>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>361</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Yolo minimum confidence threshold for detections</string>
+        </property>
+       </widget>
+       <widget class="QDoubleSpinBox" name="Collect_model_threshold">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>20</y>
+          <width>62</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <double>0.100000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>1.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.050000000000000</double>
+        </property>
+        <property name="value">
+         <double>0.500000000000000</double>
+        </property>
+       </widget>
+       <widget class="QDoubleSpinBox" name="collect_filter_class_detection_value">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>50</y>
+          <width>62</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <double>0.050000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>100.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.050000000000000</double>
+        </property>
+        <property name="value">
+         <double>0.100000000000000</double>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_7">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>50</y>
+          <width>341</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Filter if detected class dimensions less than % of input image</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_7">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>491</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Input filters</string>
+      </property>
+      <widget class="QSpinBox" name="collect_filter_input_width_value">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>20</y>
+         <width>71</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>256</number>
+       </property>
+       <property name="maximum">
+        <number>4096</number>
+       </property>
+       <property name="value">
+        <number>512</number>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="collect_filter_input_height_value">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>50</y>
+         <width>71</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>256</number>
+       </property>
+       <property name="maximum">
+        <number>4096</number>
+       </property>
+       <property name="value">
+        <number>512</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>341</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Filter input images less than (width, px)</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>50</y>
+         <width>351</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Filter input images less than (height, px)</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>491</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Input path with images (JPG and PNG supported)</string>
+      </property>
+      <widget class="QLineEdit" name="collect_input_path">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>391</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="collect_input_browse">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>20</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Browse</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>580</y>
+        <width>491</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Output path</string>
+      </property>
+      <widget class="QLineEdit" name="collect_output_path">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>391</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="collect_output_path_browse">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>20</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Browse</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="collect_start">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>650</y>
+        <width>261</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Start collecting images</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_10">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>440</y>
+        <width>491</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Output rules</string>
+      </property>
+      <widget class="QCheckBox" name="collect_centered_crops_boolean">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>261</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Seek to make class-centered crops</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>261</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Output resolution (width, px)</string>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="collect_output_width_value">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>60</y>
+         <width>61</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>256</number>
+       </property>
+       <property name="maximum">
+        <number>4096</number>
+       </property>
+       <property name="value">
+        <number>512</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>90</y>
+         <width>281</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Output resolution (height, px)</string>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="collect_output_height_value">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>90</y>
+         <width>61</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>256</number>
+       </property>
+       <property name="maximum">
+        <number>4096</number>
+       </property>
+       <property name="value">
+        <number>512</number>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Background removing</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox_9">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>491</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Input path with images (JPG and PNG supported)</string>
+      </property>
+      <widget class="QLineEdit" name="segm_input_path">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>391</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="segm_input_browse">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>20</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Browse</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_11">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>491</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Yolo instance segmentation</string>
+      </property>
+      <widget class="QGroupBox" name="groupBox_12">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>471</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Yolo model path</string>
+       </property>
+       <widget class="QLineEdit" name="segm_model_path">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>381</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="segm_model_browse">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>20</y>
+          <width>61</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Browse</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_13">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>200</y>
+         <width>471</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Yolo recognition filters</string>
+       </property>
+       <widget class="QLabel" name="label_5">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>24</y>
+          <width>351</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Yolo minimum confidence threshold for segmentation</string>
+        </property>
+       </widget>
+       <widget class="QDoubleSpinBox" name="segm_model_threshold">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>20</y>
+          <width>62</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <double>0.100000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>1.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.050000000000000</double>
+        </property>
+        <property name="value">
+         <double>0.500000000000000</double>
+        </property>
+       </widget>
+       <widget class="QDoubleSpinBox" name="segm_smooth_ratio">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>50</y>
+          <width>62</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <double>1.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>10.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.100000000000000</double>
+        </property>
+        <property name="value">
+         <double>1.100000000000000</double>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_8">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>50</y>
+          <width>351</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Segmentation mask smooth ratio (kernel deviation)</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_9">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>80</y>
+          <width>311</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Background mask color</string>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="segm_background_R">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>100</y>
+          <width>61</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="maximum">
+         <number>255</number>
+        </property>
+        <property name="value">
+         <number>255</number>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="segm_background_B">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>100</y>
+          <width>61</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="maximum">
+         <number>255</number>
+        </property>
+        <property name="value">
+         <number>255</number>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="segm_background_G">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>100</y>
+          <width>61</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="maximum">
+         <number>255</number>
+        </property>
+        <property name="value">
+         <number>255</number>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_10">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>80</y>
+          <width>16</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>R</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_11">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>80</y>
+          <width>16</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>G</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_12">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>80</y>
+          <width>16</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>B</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>80</y>
+         <width>471</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Supported class segmentation</string>
+       </property>
+       <widget class="QListWidget" name="Segm_model_list">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>451</width>
+          <height>91</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_14">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>430</y>
+        <width>491</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Output path</string>
+      </property>
+      <widget class="QLineEdit" name="segm_output_path">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>391</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="segm_output_path_browse">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>20</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Browse</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="segm_start">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>650</y>
+        <width>261</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Start removing backgrounds</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
