@@ -10,11 +10,13 @@ Install:
 - install graphics card drivers and Cuda
 - download necesary yolo models with desired pretrained classes: object detection is for collect images tab and instance segmentation is for background removing
 
-pip install PyQt6
-pip install opencv-python
-pip install ultralytics
-pip install omegaconf
-pip install shapely
+- pip install PyQt6
+- pip install opencv-python
+- pip install ultralytics
+- pip install omegaconf
+- pip install shapely
+
+
 
 Using:
 python start.py
