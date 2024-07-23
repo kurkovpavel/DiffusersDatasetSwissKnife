@@ -16,10 +16,11 @@ Install:
 - pip install omegaconf
 - pip install shapely
 
-
-
 Using:
 python start.py
+
+Screenshots:
+
 ![alt text](https://github.com/kurkovpavel/DiffusersDatasetSwissKnife/blob/main/segment.png?raw=true)
 
 ![alt text](https://github.com/kurkovpavel/DiffusersDatasetSwissKnife/blob/main/collect.png?raw=true)
